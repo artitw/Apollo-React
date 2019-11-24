@@ -1,5 +1,9 @@
 import { Query } from "react-apollo";
-import { gql } from "apollo-boost";
+import { gql, ApolloClient } from "apollo-boost";
+
+const client = new ApolloClient({
+  uri: 'https://dog-graphql-api.glitch.me/graphql'
+});
 
 const ExchangeRates = () => (
   <Query
