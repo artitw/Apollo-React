@@ -1,5 +1,10 @@
-import gql from "graphql-tag";
+//import gql from "graphql-tag";
 import { Query } from "react-apollo";
+import { gql, ApolloClient } from "apollo-boost";
+
+const client = new ApolloClient({
+  uri: 'https://dog-graphql-api.glitch.me/graphql'
+});
 
 const GET_DOGS = gql`
   {
